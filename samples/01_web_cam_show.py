@@ -1,4 +1,5 @@
 # import
+import os
 import cv2
 
 # main
@@ -6,6 +7,9 @@ def main():
     # get camera
     cap = cv2.VideoCapture(0)
     
+    # save image counter
+    save_number = 0
+
     # loop
     while True:
         # get frame
@@ -20,6 +24,17 @@ def main():
         if key == ord('q'):
             # break this loop
             break
+        # if key input is 's'
+        elif key == ord('s'):
+            # save path 
+            save_path = os.path.join(
+                '../output/01',
+                str(save_number) + '.png')
+            # save now frame
+            cv2.imwrite(save_path, frame)
+
+            # count up
+            save_number += 1
 
         # showing image
         cv2.imshow("Frame", frame)
