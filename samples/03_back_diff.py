@@ -16,7 +16,7 @@ def main():
     img_diff = cv2.absdiff(img_fore_gray, img_back_gray)
     
     # save
-    cv2.imwrite('../output/03/sub.png', img_sub)
+    cv2.imwrite('../output/03/sub.png', img_diff)
 
 if __name__ == '__main__':
     main()
