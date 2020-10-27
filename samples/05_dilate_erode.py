@@ -6,8 +6,8 @@ import numpy as np
 def main():
 
     # Elements for dilation / erosion
-    kernel_4 = np.array([[0,1,0],[1,1,1],[0,1,0]], np.uint8)
-    kernel_8 = np.array([[1,1,1],[1,1,1],[1,1,1]], np.uint8)
+    kernel_4 = np.array([[0, 1, 0],[1, 1, 1],[0, 1, 0]], np.uint8)
+    kernel_8 = np.array([[1, 1, 1],[1, 1, 1],[1, 1, 1]], np.uint8)
 
     # Sample image read (gray scale)
     img_gray = cv2.imread(
