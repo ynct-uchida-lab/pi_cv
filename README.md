@@ -32,7 +32,9 @@ $ git clone https://github.com/ynct-uchida-lab/pi_cv.git
     └samples
         ├01_web_cam_show.py
         ├02_color_convert.py
-        └03_back_diff.py
+        ├03_back_diff.py
+        ├04_mask.py
+        └05_dilate_erode.py
 ```
 
 - data
@@ -53,6 +55,12 @@ $ git clone https://github.com/ynct-uchida-lab/pi_cv.git
         - 03_back_diff.py
             - `./data/foreground.png`と`./data/background.png`を用いて背景差分を行い保存
                 - `./output/03`へ保存
+        - 04_mask.py
+            - マスク処理のサンプル
+                - `./output/04`へ保存
+        - 05_dilate_erode.py
+            - 膨張処理と縮小処理のサンプル
+                - `./output/05`へ保存
 
 ## Other
 
