@@ -9,7 +9,7 @@ def main():
 
     # define hsv threshold
     hsv_lower = np.array([0, 155, 155])
-    hsv_upper = np.array([30, 255, 255])
+    hsv_upper = np.array([10, 255, 255])
 
     # convert RGB to HSV
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
