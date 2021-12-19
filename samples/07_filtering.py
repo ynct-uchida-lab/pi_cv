@@ -9,7 +9,7 @@ def main():
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     
     # average filter
-    img_blur = cv2.blur(img,(5, 5))
+    img_blur = cv2.blur(img, (5, 5))
 
     # sobel filter
     img_sobel_x = cv2.Sobel(img_gray, cv2.CV_64F, 1, 0, ksize=3)

@@ -10,7 +10,7 @@ def gaussian(x, sigma, mu):
     # 分散共分散行列の逆行列
     inv = np.linalg.inv(sigma)
     n = x.ndim
-    return np.exp(-np.diag((x - mu)@inv@(x - mu).T)/2.0) / (np.sqrt((2 * np.pi) ** n * det))
+    return np.exp(-np.diag((x - mu)@inv@(x - mu).T) / 2.0) / (np.sqrt((2 * np.pi) ** n * det))
 
 def main():
     # 関数に投入するデータを作成
