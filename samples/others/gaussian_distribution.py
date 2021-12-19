@@ -15,9 +15,9 @@ def gaussian(x, sigma, mu):
 def main():
     # 関数に投入するデータを作成
     x = y = np.arange(-3, 3, 0.1)
-    X, Y = np.meshgrid(x, y)
+    mash_x, mash_y = np.meshgrid(x, y)
 
-    z = np.c_[X.ravel(),Y.ravel()]
+    z = np.c_[mash_x.ravel(), mash_y.ravel()]
 
     # 変数x, yの平均値を指定
     mu = np.array([0, 0])
@@ -27,13 +27,13 @@ def main():
     # ガウシアン分布を計算
     g = gaussian(z, sigma, mu)
     # 二次元にreshape
-    g = g.reshape(X.shape)
+    g = g.reshape(mash_x.shape)
 
     # 二次元正規分布をplot
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     # 描画
-    ax.plot_surface(X, Y, g, rstride=1, cstride=1, cmap=cm.coolwarm)
+    ax.plot_surface(mash_x, mash_y, g, rstride=1, cstride=1, cmap=cm.coolwarm)
     plt.savefig('../../output/metadata/2_gaussian.png')
 
 if __name__ == '__main__':
