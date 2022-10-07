@@ -1,45 +1,32 @@
-# import
+# ライブラリのインポート
 import os
 import cv2
 
-# main
+# main関数
 def main():
-    # get camera
+    # カメラを取得
     cap = cv2.VideoCapture(0)
     
-    # save image counter
-    save_number = 0
-
-    # loop
+    # 無限ループ
     while True:
-        # get frame
+        # フレームを取得
         ret, frame = cap.read()
-        # failed to get image
+        # フレームを取得できない場合
         if not ret:
+            # ループを抜ける
             break
 
-        # key input
-        key = cv2.waitKey(1)
-        # if key input is 'q'
-        if key == ord('q'):
-            # break this loop
-            break
-        # if key input is 's'
-        elif key == ord('s'):
-            # save path 
-            save_path = os.path.join(
-                '../output/01',
-                str(save_number) + '.png')
-            # save now frame
-            cv2.imwrite(save_path, frame)
-
-            # count up
-            save_number += 1
-
-        # showing image
+        # フレームを表示
         cv2.imshow("Frame", frame)
 
-    # memory release
+        # キー入力待ち(1ms)
+        key = cv2.waitKey(1)
+        # 入力が'q'の場合
+        if key == ord('q'):
+            # ループを抜ける
+            break
+
+    # メモリの開放
     cap.release()
     cv2.destroyAllWindows()
 
