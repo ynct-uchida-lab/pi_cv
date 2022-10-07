@@ -9,9 +9,10 @@ Raspiで画像処理を行うサンプル集
 
 ```sh
 $ sudo apt-get update -y
-$ sudo apt-get install python-matplotlib -y
+$ sudo apt-get install python3-numpy -y
+$ sudo apt-get install python3-matplotlib -y
 $ sudo apt-get install libopencv-dev -y
-$ sudo apt-get install python-opencv -y
+$ sudo apt-get install python3-opencv -y
 ```
 
 - git cloneで任意のディレクトリへクローンしてくる
